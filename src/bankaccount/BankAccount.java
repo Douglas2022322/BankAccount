@@ -15,17 +15,17 @@ public class BankAccount {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        BankAccountManagement account1 = new BankAccountManagement(100);
-        
-        System.out.println(account1.getBalance());
-        
-        account1.deposit(50);
-        
-        account1.withdraw(25.50);
-        
-        System.out.println(account1.getBalance());
-        
+
+        BankAccountManagement account = new BankAccountManagement(1,100);
+
+        System.out.println(account.getBalance());
+
+        account.deposit(50);
+
+        account.withdraw(25.50);
+
+        System.out.println("Your curent balance is: " + account.getBalance());
+
     }
-    
+
 }
