@@ -13,23 +13,30 @@ public class BankAccountManagement {
     private double balance;
     
 //Constructors
-    public BankAccountManagement(double balance) {
-        this.balance = balance;
+    public BankAccountManagement(double initialBbalance) {
+        this.balance = initialBbalance;
     }
 
     public BankAccountManagement() {
         this.balance = 0;
     } 
+    
+    //Methods
+    public void deposit(double amount){
+        this.balance += amount;
+    }
+    
+    public void withdraw(double amount){
+        if(amount <= balance){
+            balance-=amount;
+        }else{
+            System.out.println("Insufficient founds.");
+        }
+    }
         
-    //getters and setters
+    //getter
     public double getBalance() {
         return balance;
     }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
-    
-    
     
 }
